@@ -1,0 +1,17 @@
+  SAP 6, 0, 128
+          SAP 140, 0, 6    // set microstep resolution to 6
+         // SAP 4, 0, 25600  // set velocity to 25.12 mm/s
+          SAP 4, 0, 14,318  // set velocity to 13.33mms for a 3 sec 40 mm pullback
+		  SAP 5, 0, 30000  // set acceleration to 29.43 mm/s^2
+          SAP 7, 0, 20    // set holding current to .078 A
+          SAP 181, 0, 20  // set stall velocity to 1.96 mm/s NEEDS TO BE SET EVERY RUN
+          //SAP 193, 0, 4   // set reference search to find left stop switch
+        
+		  MVP ABS, 0, 0    // set home position -->
+		  MST 0
+		  SAP 1, 0, 0
+		  CCO 0, 0		   // set home poisition
+         // SCO 1, 0, 50956  // set pull back length to 50 mm
+		  SCO 2, 0, 42954  // set pull back length to 40 mm
+          MVP COORD, 0, 1  // pull back
+          MVP COORD, 0, 0  // return to home
